@@ -50,21 +50,23 @@
                                 </h2>
                                 <div>
                                     <h3>Información del pago</h3>
-                                    <ol>
+                                    <ul>
                                         <li>external_reference: {{external_reference}}</li>
                                         <li>preference_id: {{preference_id}}</li>
-                                    </ol>
+                                    </ul>
 
                                 </div>
+                             </div>
+                             <div class="as-success-container column large-6 small-3"></div>
                                 <div style="border: 2px solid '#666666';">
                                     <h3>Información del producto</h3>
-                                    <ol>
+                                    <ul>
                                         {{#each items}}                                            
                                              <img src={{picture_url}} alt={{title}}>
                                             <li><strong>Nombre: </strong>{{title}}</li>
                                             <li>Descripción: {{description}}</li>
                                         {{/each}}   
-                                    </ol>
+                                    </ul>
 
                                 </div>
                                 <a href="/">
