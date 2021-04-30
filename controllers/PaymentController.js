@@ -14,12 +14,12 @@ class PaymentController {
           img
         );
         console.log(checkout, "checkout response");
-        return res.redirect(checkout.init_point); // cambiar esto
+        return res.redirect(checkout.init_point);
       } catch (err) {
         res.redirect("/");
         return res.status(500).json({
           error: true,
-          msg: "Ocurrio un error al intentar utilizar Mercado Pago"
+          msg: "Se produjo un error al usar Mercado Pago"
         });
       }
     }
@@ -31,7 +31,7 @@ class PaymentController {
           body += chunk.toString();
         });
         req.on("end", () => {
-          console.log(body, "Respuesta de Webhook");
+          console.log(body, "Webhook Success");
           res.end("ok");
         });
       }
