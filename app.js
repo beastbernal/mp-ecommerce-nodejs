@@ -25,10 +25,6 @@ app.get("/", function (req, res) {
   res.render("home");
 });
 
-app.get("/detail", function (req, res) {
-  res.render("detail", req.query);
-});
-
 app.get("/error", (req, res) => {
   res.render("error");
 });
